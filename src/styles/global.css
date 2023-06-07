@@ -1,19 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /*
   The CSS in this style tag is based off of Bear Blog's default CSS.
   https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 body {
-	font-family: Verdana, sans-serif;
+	font-family: 'Exo 2', sans-serif;
 	margin: auto;
 	padding: 20px;
 	max-width: 65ch;
 	text-align: left;
-	background-color: #fff;
+	background-color: #082032;
+	@apply overflow-auto;
+	@apply min-h-screen;
+	@apply text-gray-100;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	line-height: 1.5;
-	color: #444;
 }
 h1,
 h2,
@@ -23,13 +30,10 @@ h5,
 h6,
 strong,
 b {
-	color: #222;
+	@apply text-gray-100;
 }
 a {
-	color: #3273dc;
-}
-nav a {
-	margin-right: 10px;
+	color: #FF4C29;
 }
 textarea {
 	width: 100%;
@@ -49,8 +53,11 @@ img {
 	height: auto;
 }
 code {
-	padding: 2px 5px;
-	background-color: #f2f2f2;
+	@apply px-2;
+	@apply py-1;
+	@apply bg-slate-700;
+	@apply text-sm;
+	@apply rounded-sm;
 }
 pre {
 	padding: 1rem;
@@ -65,3 +72,19 @@ blockquote {
 	margin: 0px;
 	font-style: italic;
 }
+
+/* .prose :where(ol > li):not(:where([class~="not-prose"] *))::marker {
+	@apply text-gray-100;
+}
+
+.prose :where(ul > li):not(:where([class~="not-prose"] *))::marker {
+	@apply text-gray-100;
+}
+
+.prose :where(h1):not(:where([class~="not-prose"] *)) {
+	@apply text-gray-100;
+}
+
+.prose :where(blockquote):not(:where([class~="not-prose"] *)) {
+	@apply text-gray-400;
+} */
