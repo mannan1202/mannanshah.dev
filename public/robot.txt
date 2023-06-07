@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mannanshah.dev/sitemap-index.xml
