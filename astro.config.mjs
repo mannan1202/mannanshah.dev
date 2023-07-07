@@ -16,6 +16,9 @@ export default defineConfig({
         applyBaseStyles: false,
       },
     }),
-    robotsTxt({ sitemap: true }),
+    robotsTxt({
+      sitemap: true,
+      policy: [{ allow: '/', userAgent: '*', disallow: ['/about'] }],
+    }),
   ],
 });
