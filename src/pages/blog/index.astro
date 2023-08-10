@@ -28,8 +28,11 @@ const posts = (await getCollection('blog')).sort(
         font-style: italic;
         color: #595959;
       }
+      ul li a {
+        @apply text-white;
+      }
       ul li a:visited {
-        color: #334756;
+        @apply text-gray-400;
       }
       ul li a:hover {
         @apply underline;
@@ -45,7 +48,12 @@ const posts = (await getCollection('blog')).sort(
             posts.map((post) => (
               <li>
                 <FormattedDate date={post.data.pubDate} />
-                <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+                <a
+                  href={`/blog/${post.slug}/`}
+                  class="text-gray-100 hover:text-[#FF4C29]"
+                >
+                  {post.data.title}
+                </a>
               </li>
             ))
           }

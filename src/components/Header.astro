@@ -1,5 +1,7 @@
 ---
 import HeaderLink from './HeaderLink.astro';
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1);
 ---
 
 <header>
@@ -7,8 +9,22 @@ import HeaderLink from './HeaderLink.astro';
 		{SITE_TITLE}
 	</h2> -->
   <nav class="flex justify-end space-x-2">
-    <HeaderLink href="/">Home</HeaderLink>
-    <HeaderLink href="/blog">Blog</HeaderLink>
+    <HeaderLink
+      href="/"
+      class={currentPath === ''
+        ? 'text-[#FF4C29] underline'
+        : 'text-white hover:text-[#FF4C29]'}
+    >
+      Home
+    </HeaderLink>
+    <HeaderLink
+      href="/blog"
+      class={currentPath === 'blog'
+        ? 'text-[#FF4C29] underline'
+        : 'text-white hover:text-[#FF4C29]'}
+    >
+      Blog
+    </HeaderLink>
   </nav>
 </header>
 <style>
