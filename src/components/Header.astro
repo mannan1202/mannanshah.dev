@@ -2,6 +2,7 @@
 import HeaderLink from './HeaderLink.astro';
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1);
+console.log(currentPath);
 ---
 
 <header>
@@ -19,7 +20,7 @@ const currentPath = pathname.slice(1);
     </HeaderLink>
     <HeaderLink
       href="/blog"
-      class={currentPath === 'blog'
+      class={currentPath === 'blog/' || currentPath === 'blog'
         ? 'text-[#FF4C29] underline'
         : 'text-white hover:text-[#FF4C29]'}
     >
