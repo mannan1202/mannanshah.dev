@@ -7,8 +7,13 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 
+ @font-face {
+	font-family: 'Outfit';
+	src: url('./fonts/Outfit-ExtraLight.ttf');
+}
+
 body {
-	font-family: 'Outfit', sans-serif;
+	font-family: 'Outfit';
 	font-weight: 200;
 	font-display: block;
 	font-style: normal;
