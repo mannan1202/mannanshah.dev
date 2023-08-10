@@ -1,24 +1,21 @@
 ---
 import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
 ---
 
 <header>
-	<!-- <h2>
+  <!-- <h2>
 		{SITE_TITLE}
 	</h2> -->
-	<nav class="flex justify-end space-x-2">
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/blog">Blog</HeaderLink>
-		<!-- <HeaderLink href="https://twitter.com/cosmic_vyakti" target="_blank">Twitter</HeaderLink>
-		<HeaderLink href="https://github.com/mannan1202" target="_blank">GitHub</HeaderLink> -->
-	</nav>
+  <nav class="flex justify-end space-x-2">
+    <HeaderLink href="/">Home</HeaderLink>
+    <HeaderLink href="/blog">Blog</HeaderLink>
+  </nav>
 </header>
 <style>
-	header {
-		margin: 0em 0 2em;
-	}
-	h2 {
-		margin: 0.5em 0;
-	}
+  header {
+    margin: 0em 0 2em;
+  }
+  h2 {
+    margin: 0.5em 0;
+  }
 </style>
